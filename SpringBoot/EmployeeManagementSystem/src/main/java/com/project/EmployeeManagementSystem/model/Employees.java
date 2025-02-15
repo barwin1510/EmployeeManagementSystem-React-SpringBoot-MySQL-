@@ -13,18 +13,8 @@ public class Employees {
 	private Long id;
 	private String name;
 	private String department;
+	private String experience;
 	private Long salary;
-	
-	public Employees() {
-		
-	}
-	
-	public Employees(String name, String department, Long salary) {
-		super();
-		this.name = name;
-		this.department = department;
-		this.salary = salary;
-	}
 
 	public Long getId() {
 		return id;
@@ -49,6 +39,14 @@ public class Employees {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
+	
+	public String getExperience() {
+		return experience;
+	}
+
+	public void setExperience(String experience) {
+		this.experience = experience;
+	}
 
 	public Long getSalary() {
 		return salary;
@@ -57,6 +55,5 @@ public class Employees {
 	public void setSalary(Long salary) {
 		this.salary = salary;
 	}
-	
-	
+		
 }

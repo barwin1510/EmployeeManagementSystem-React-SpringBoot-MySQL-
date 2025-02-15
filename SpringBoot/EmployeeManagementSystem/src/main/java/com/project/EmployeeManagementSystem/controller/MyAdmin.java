@@ -3,6 +3,7 @@ package com.project.EmployeeManagementSystem.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.EmployeeManagementSystem.model.DeletedEmployees;
 import com.project.EmployeeManagementSystem.model.Employees;
 import com.project.EmployeeManagementSystem.service.EmployeesService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("admin")
 public class MyAdmin {
 
@@ -44,12 +45,7 @@ public class MyAdmin {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteEmployee(@PathVariable Long id, @RequestBody String reason) {
-        return service.deleteEmployee(id,reason);
-    }
-    
-    @GetMapping("deletedEmployees")
-    public List<DeletedEmployees> deletedEmployees(){
-    	return service.deletedEmployees();
+    public String deleteEmployee(@PathVariable Long id) {
+        return service.deleteEmployee(id);
     }
 }
