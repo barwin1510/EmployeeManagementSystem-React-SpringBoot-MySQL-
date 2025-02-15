@@ -1,0 +1,25 @@
+.user-page {
+    padding: 2rem;
+}
+
+.user-page h1 {
+    text-align: center;
+}
+
+.user-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.user-page th,
+.user-page td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-page th {
+    background-color: #333;
+    color: white;
+}

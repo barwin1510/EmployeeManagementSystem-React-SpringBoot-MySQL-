@@ -27,12 +27,12 @@ const EmployeeForm = () => {
     if (id) {
       axios
         .put(`http://localhost:8080/admin/${id}`, employee)
-        .then(() => navigate("/"))
+        .then(() => navigate("/admin"))
         .catch((error) => console.error("Error updating employee:", error));
     } else {
       axios
         .post("http://localhost:8080/admin", employee)
-        .then(() => navigate("/"))
+        .then(() => navigate("/admin"))
         .catch((error) => console.error("Error adding employee:", error));
     }
   };
